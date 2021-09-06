@@ -1,14 +1,14 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
 
-import { ListSpecificationUseCase } from "./ListSpecificationUseCase";
+import { ListSpecificationUseCase } from './ListSpecificationUseCase';
 
 class ListSpecificationController {
-    constructor(private ListSpecificationUseCase : ListSpecificationUseCase) {}
-    handle(request : Request, response: Response) : Response {
-        const all = this.ListSpecificationUseCase.execute();
+  constructor(private ListSpecificationUseCase: ListSpecificationUseCase) {}
+  handle(request: Request, response: Response): Response {
+    const all = this.ListSpecificationUseCase.execute();
 
-        return response.json(all);
-    };
+    return response.json(all);
+  }
 }
 
-export { ListSpecificationController } 
+export { ListSpecificationController };

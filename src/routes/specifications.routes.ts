@@ -3,7 +3,6 @@ import { Router } from 'express';
 import { createSpecificationController } from '../models/cars/useCases/createSpecification';
 import { listSpecificationController } from '../models/cars/useCases/listSpecification';
 
-
 const specificationsRoutes = Router();
 
 specificationsRoutes.post('/', (request, response) => {

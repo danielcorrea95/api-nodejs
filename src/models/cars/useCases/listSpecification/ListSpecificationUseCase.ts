@@ -1,17 +1,14 @@
-import { Specification } from "../../model/Specification";
-import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
+import { Specification } from '../../model/Specification';
+import { ISpecificationsRepository } from '../../repositories/ISpecificationsRepository';
 
 class ListSpecificationUseCase {
-    constructor (private specificationRepository: ISpecificationsRepository) {}
+  constructor(private specificationRepository: ISpecificationsRepository) {}
 
-    execute(): Specification[] {
+  execute(): Specification[] {
+    const specifications = this.specificationRepository.list();
 
-        const specifications = this.specificationRepository.list();
-
-        return specifications;
-
-    }
-
+    return specifications;
+  }
 }
 
-export { ListSpecificationUseCase }
+export { ListSpecificationUseCase };
